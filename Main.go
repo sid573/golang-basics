@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"sort"
 
@@ -45,8 +46,12 @@ func main() {
 	}
 
 	fmt.Println(player.P)
+
 	sort.Sort(player)
-	fmt.Println(player.P)
+	b, _ := json.Marshal(player.P)
+	CtB := []byte(string(b))
+	fp, _ := pack.OSCustomOpen("player.txt", CtB)
+	fp.Close()
 
 }
 
