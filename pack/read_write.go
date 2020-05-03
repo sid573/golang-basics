@@ -1,6 +1,11 @@
 package pack
 
-import "os"
+import (
+	"io"
+	"log"
+	"os"
+	"strings"
+)
 
 // OSCustomOpen for opening a file
 func OSCustomOpen(f1 string, val []byte) (*os.File, error) {
@@ -14,4 +19,18 @@ func OSCustomOpen(f1 string, val []byte) (*os.File, error) {
 	}
 
 	return f, nil
+}
+
+/*
+io has different kind of interfaces
+which can be connected with different libraries.
+such as bufio, strings etc.
+*/
+
+// CustomCopyBuffer ...
+func CustomCopyBuffer() {
+	f := strings.NewReader("hello\n")
+	if _, err := io.Copy(os.Stdout, f); err != nil {
+		log.Fatal(err)
+	}
 }

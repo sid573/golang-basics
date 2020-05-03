@@ -1,13 +1,10 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"sort"
-
 	"learn/pack"
 )
 
+/*
 func main() {
 
 	S1 := &pack.Student{
@@ -53,9 +50,30 @@ func main() {
 	fp, _ := pack.OSCustomOpen("player.txt", CtB)
 	fp.Close()
 
+	go pack.Learn()
+	fmt.Println("Main.go")
+	time.Sleep(1 * time.Second)
+
 }
 
 // PCheck is used to print
 func PCheck(s pack.Generic) {
 	fmt.Println(s)
+}
+*/
+/*
+func main() {
+	d, _ := os.UserCacheDir()
+	fmt.Println(d)
+	pack.CustomCopyBuffer()
+}
+*/
+
+func main() {
+	c := &pack.Person{
+		Name:  "Siddhant",
+		Limit: 23,
+	}
+
+	pack.Random(c)
 }
