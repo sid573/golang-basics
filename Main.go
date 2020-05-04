@@ -83,6 +83,6 @@ func main() {
 // Channels with go routine
 
 func main() {
-	pack.Example1()
-	pack.Example2()
+	pack.Example3()
+	pack.Example4()
 }
