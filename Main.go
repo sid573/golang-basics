@@ -68,7 +68,7 @@ func main() {
 	pack.CustomCopyBuffer()
 }
 */
-
+/*
 func main() {
 	c := &pack.Person{
 		Name:  "Siddhant",
@@ -76,4 +76,13 @@ func main() {
 	}
 
 	pack.Random(c)
+}
+*/
+
+// Examples related to WaitGroup along with go routines
+// Channels with go routine
+
+func main() {
+	pack.Example1()
+	pack.Example2()
 }
