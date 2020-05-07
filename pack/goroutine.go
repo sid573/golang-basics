@@ -20,7 +20,7 @@ func Example1() {
 		}()
 	}
 	wg.Wait()
-	fmt.Println("Example1 is completed\n")
+	fmt.Println("Example1 is completed")
 }
 
 // Example2 is basic implementation of passing function in channel inside go routine
@@ -53,7 +53,7 @@ func Example2() {
 	doFunc <- sum
 
 	fmt.Println(result)
-	fmt.Println("Example2 is completed\n")
+	fmt.Println("Example2 is completed")
 
 }
 
