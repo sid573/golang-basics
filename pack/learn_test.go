@@ -21,6 +21,7 @@ func TestAdd(t *testing.T) {
 // BenchMarking
 
 func BenchmarkAdd(b *testing.B) {
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		s := []int{2, 3}
 		sum(s)

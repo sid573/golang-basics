@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"learn/pack"
 )
 
@@ -82,7 +83,20 @@ func main() {
 // Examples related to WaitGroup along with go routines
 // Channels with go routine
 
+// func main() {
+// 	pack.Example3()
+// 	pack.Example4()
+// }
+
+// Written Converter to convert to lower case
+// Check pack > convert_lower.go
+
 func main() {
-	pack.Example3()
-	pack.Example4()
+	a := &pack.Article{
+		Title:    "Hello",
+		Subtitle: "Russia",
+		Content:  "Goto function to Check",
+	}
+	d := pack.ConvArticleList(a)
+	fmt.Println(d)
 }
