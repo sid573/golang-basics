@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	examples "learn/pack/examples"
 )
 
@@ -91,12 +90,21 @@ func main() {
 // Written Converter to convert to lower case
 // Check pack > convert_lower.go
 
+// func main() {
+// 	a := &examples.Article{
+// 		Title:    "Hello",
+// 		Subtitle: "Russia",
+// 		Content:  "Goto function to Check",
+// 	}
+// 	d := examples.ConvArticleList(a)
+// 	fmt.Println(d)
+// }
+
+/*
+	Working on Btp simultion regarding SDS - Stochastic Diffusion Search
+	Swarm Computing Algoritm
+*/
 func main() {
-	a := &examples.Article{
-		Title:    "Hello",
-		Subtitle: "Russia",
-		Content:  "Goto function to Check",
-	}
-	d := examples.ConvArticleList(a)
-	fmt.Println(d)
+	env := examples.SDSEnv(10, 20)
+	env.DisplayEnv()
 }
