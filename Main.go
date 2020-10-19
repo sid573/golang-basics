@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn/pack"
+	examples "learn/pack/examples"
 )
 
 /*
@@ -92,11 +92,11 @@ func main() {
 // Check pack > convert_lower.go
 
 func main() {
-	a := &pack.Article{
+	a := &examples.Article{
 		Title:    "Hello",
 		Subtitle: "Russia",
 		Content:  "Goto function to Check",
 	}
-	d := pack.ConvArticleList(a)
+	d := examples.ConvArticleList(a)
 	fmt.Println(d)
 }
